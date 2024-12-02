@@ -8,7 +8,8 @@ import (
 	"strings"
 )
 
-var counterOfSaveLines int = 0
+var counterOfSaveLinesPartOne int = 0
+var counterOfSaveLinesPartTwo int = 0
 
 func isSafe(list []int) bool {
 	increasing := true
@@ -74,10 +75,15 @@ func RunDay2() {
 			ListOfLines = append(ListOfLines, level)
 		}
 
+		if isSafe(ListOfLines) {
+			counterOfSaveLinesPartOne += 1
+		}
+
 		if isSafe(ListOfLines) || makeLineSafeWithOneChange(ListOfLines) {
-			counterOfSaveLines += 1
+			counterOfSaveLinesPartTwo += 1
 		}
 	}
 
-	fmt.Println("Safe lines: ", counterOfSaveLines)
+	fmt.Println("Safe lines: ", counterOfSaveLinesPartOne)
+	fmt.Println("Safe lines with one change: ", counterOfSaveLinesPartTwo)
 }
