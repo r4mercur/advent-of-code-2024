@@ -5,6 +5,7 @@ import (
 	"advent-of-code-2024/days/day2"
 	"advent-of-code-2024/days/day3"
 	"advent-of-code-2024/days/day4"
+	"advent-of-code-2024/days/day5"
 	"fmt"
 )
 
@@ -18,4 +19,6 @@ func main() {
 	day3.RunDay3()
 
 	day4.RunDay4()
+
+	day5.RunDay5()
 }
